@@ -15,16 +15,31 @@ while True:
     jogador['total'] = totG
     time.append(jogador.copy())
     jogador.clear()
+    gols.clear()
+    totG = 0
     resp = input('Deseja Continuar? [S/N] ').upper()
     if resp in 'N':
         break
     print('-' * 10)
-print('=-'*20)
-print(time)
-print(jogador)
 
 print('=-'*50)
-print('{:<5}{:<15}{:<25}{:<5}'.format('COD', 'NOME', 'GOLS', 'TOTAL'))
+print('{:<5}{:<10}{:<15}{:<5}'.format('COD', ' NOME', '  GOLS', '   TOTAL'))
+print('-'*40)
 for j in time:
-    print('{:<5} {:<15} {} {:5}'.format(j['cod'], j['nome'], j['gols'], j['total']))
-    #print('{:5}{:10}{:15}{:5}'.format(j["cod"], j["nome"], j["gols"], j["total"]))
+    s = str(j['gols'])
+    print('{:<5} {:<10} {:<15} {:<5}'.format(j['cod'], j['nome'], s, j['total']))
+
+print('=-'*40)
+resp = int(input('Mostrar dados de qual jogador? [digite o id do jogador] [999 interrompe] '))
+while True:
+    if resp == 999:
+        break
+    if resp >= len(time):
+        print('Jogador inexistente!')
+        resp = int(input('Mostrar dados de qual jogador? [digite o id do jogador] [999 interrompe] '))
+    else:
+        print('levantamento do jogador {}'.format(time[resp]['nome']))
+        for i, g in enumerate(time[resp]['gols']):
+            print(f'na partida {i+1} fez {g} gols')
+        print('=-' * 40)
+        resp = int(input('Mostrar dados de qual jogador? [digite o id do jogador] [999 interrompe] '))

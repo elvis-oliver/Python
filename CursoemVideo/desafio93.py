@@ -8,6 +8,7 @@ for c in range(0, totP):
     totG += quantG
 jogador['gols'] = gols.copy()
 jogador['total'] = totG
+
 print('=-'*20)
 print(jogador)
 
@@ -19,3 +20,4 @@ print('=-' * 20)
 print(f'O jogador {jogador["nome"]} jogou {totP} partida')
 for c in range(0, totP):
     print(f'    => Na partida {c+1}, ele fez {jogador["gols"][c]} gols')
+
