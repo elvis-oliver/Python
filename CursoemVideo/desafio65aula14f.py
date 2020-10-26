@@ -17,5 +17,5 @@ while r != 'N':
         maior = num
     if num < menor:
         menor = num
-print('{} {} A média entre os valores digitados é: {}'.format(tot, cTot, tot/cTot))
+print('A média entre os valores digitados é: {:.2f}'.format(tot/cTot))
 print('O maior valor digitado foi {} e o menor valor digitado foi {}'.format(maior, menor))

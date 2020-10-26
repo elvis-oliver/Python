@@ -14,7 +14,7 @@ for c in range(1, 5):
         if idade > maior and sexo == 'M':
             maior = idade
             saveNome = nome
-        if sexo == 'M' and idade < 20:
+        if sexo == 'F' and idade < 20:
             contM += 1
 print('A média de idade do grupo é de {}'.format(totIdade/4))
 print('O homem mais velho tem {} anos e se chama {}'.format(maior, saveNome))
