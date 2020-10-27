@@ -1,5 +1,6 @@
 from random import randint
 num = (randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))
+
 '''if num[0] > num[1]:
     maior = num[0]
 else:
