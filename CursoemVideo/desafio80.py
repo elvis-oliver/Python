@@ -1,4 +1,5 @@
 lista = []
+print('Você irá criar uma lista com 5 valores!')
 for c in range(0,5):
     num = int(input('Digite um valor: '))
     if c == 0 or num > lista[len(lista)-1]:

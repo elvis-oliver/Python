@@ -15,11 +15,11 @@ while resposta != 'N':
     resposta = input('Deseja continuar? [S/N] ').upper()
 
 print(f'Ao todo foram cadastrados {len(registros)} pessoas')
-print(f'O menor peso foi de {men}', end='')
+print(f'O menor peso foi de {men}', end=' ')
 for p in registros:
     if p[1] == men:
         print(f'[{p[0]}]', end='')
-print(f'\nO maior peso foi de {mai}')
+print(f'\nO maior peso foi de {mai}', end=' ')
 for p in registros:
     if p[1] == mai:
         print(f'[{p[0]}]', end='')

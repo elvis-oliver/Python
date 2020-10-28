@@ -21,4 +21,4 @@ for l in range(0, 3):
 print('=-'*20)
 print('A soma do valores da matriz é: {}'.format(soma))
 print('A soma dos valores da terceira coluna é {}'.format(somaColuna))
-print('O maior valore digitado foi {}'.format(maior))
+print('O maior valor digitado foi {}'.format(maior))
