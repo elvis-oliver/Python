@@ -19,12 +19,11 @@ while resp != 'N':
     totIdade += pessoas['idade']
     listaP.append(pessoas.copy())
     pessoas.clear()
-print(pessoas)
-print(listaP)
+
 print('=-'*20)
 print(f'A) Ao todo temos {len(listaP)} pessoas cadastradas')
 print(f'B) A média de idade das pessoas cadastradas é {int(totIdade/len(listaP))}')
-print(f'C) As mulheres cadastradas foram: ',end='')
+print(f'C) As mulheres cadastradas foram: ', end='')
 for p in listaP:
     if p['sexo'] == 'F':
         print(f'{p["nome"]}... ', end='')

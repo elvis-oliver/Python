@@ -12,7 +12,7 @@ def cont10S():
         sleep(0.5)
     print()
 def contP(i, f, p):
-    print('CONTANDO DE 1 ATÉ 10, DE 1 EM 1')
+    print(f'CONTANDO DE {i} ATÉ {f}, DE {p} EM {p}')
     for c in range(i, f, p):
         print(f'{c}...', end='')
         sleep(0.5)

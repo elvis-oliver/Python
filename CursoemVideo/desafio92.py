@@ -15,5 +15,5 @@ else:
     print(f'nome = {trabalhador["nome"]}')
     print(f'idade = {date.today().year - trabalhador["ano de nascimento"]}')
     print(f'CTPS tem o valor {trabalhador["carteira de trabalho"]}')
-    print(f'ano de contratação = {trabalhador["ano de contratação"]}')
+    print('ano de contratação = {}'.format(trabalhador["ano de contratação"]))
     print(f'salario = {trabalhador["salario"]}')
