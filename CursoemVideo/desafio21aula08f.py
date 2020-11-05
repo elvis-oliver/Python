@@ -1,5 +1,2 @@
-import pygame
-pygame.init()
-pygame.mixer.music.load('cartola.mp3')
-pygame.mixer.music.play()
-pygame.event.wait()
+import playsound
+playsound.playsound('cartola.mp3')
