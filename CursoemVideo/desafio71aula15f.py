@@ -3,7 +3,7 @@ print('{:^40}'.format('BANCO OLIVEIRA'))
 print('=-'*20)
 valor = int(input('Digite o valor que deseja sacar: R$ '))
 
-if (valor % 2 == 1) & (valor / 5 != 0):
+if (valor % 2 == 1) & (valor % 5 != 0):
     print('=-' * 20)
     print('{:^40}'.format('BANCO OLIVEIRA'))
     print('=-' * 20)
@@ -42,4 +42,3 @@ print('NOTAS DE 20: {}'.format(nota20))
 print('NOTAS DE 10: {}'.format(nota10))
 print('NOTAS DE 5: {}'.format(nota5))
 print('NOTAS DE 2: {}'.format(nota2))
-
