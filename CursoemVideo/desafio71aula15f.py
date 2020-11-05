@@ -3,53 +3,43 @@ print('{:^40}'.format('BANCO OLIVEIRA'))
 print('=-'*20)
 valor = int(input('Digite o valor que deseja sacar: R$ '))
 
+if (valor % 2 == 1) & (valor / 5 != 0):
+    print('=-' * 20)
+    print('{:^40}'.format('BANCO OLIVEIRA'))
+    print('=-' * 20)
+    print('Não temos moedas de R$ 1, digite o valor de saque novamente')
+    valor = int(input('Digite o valor que deseja sacar: R$ '))
+
+nota100 = 0
 nota50 = 0
 nota20 = 0
 nota10 = 0
 nota5 = 0
 nota2 = 0
 
-nota100 = int(valor / 100)
-num2 = int(valor % 100)
-nota50 = int((valor % 100)/50)
+if (valor/100) > 0:
+    nota100 = int(valor/100)
+    valor = valor % 100
+if (valor/50) > 0:
+    nota50 = int(valor/50)
+    valor = valor % 50
+if (valor/20) > 0:
+    nota20 = int(valor/20)
+    valor = valor % 20
+if (valor/10) > 0:
+    nota10 = int(valor/10)
+    valor = valor % 10
+if (valor/5) > 0:
+    nota5 = int(valor/5)
+    valor = valor % 5
+if (valor/2) > 0:
+    nota2 = int(valor/2)
+    valor = valor % 2
 
-if nota50 > 0:
-    nota20 = int(((valor % 100)-50)/20)
-else:
-    nota20 = int((valor % 100)/20)
-if nota50 > 0 and nota20 > 0:
-    nota10 = int((((valor % 100)-50)-(nota20*20))/10)
-else:
-    nota10 = int(((valor % 100)-(nota20*20))/10)
-if nota50 > 0 and nota20 > 0 and nota10 > 0:
-    nota5 = int( (((valor % 100)-50)-(nota20*20)-(nota10*10)) / 5)
-else:
-    nota5 = int( ((valor % 100)-(nota20*20)-(nota10*10)) / 5)
-if nota50 > 0 and nota20 > 0 and nota10 > 0 and nota5 > 0:
-    nota2 = int( (((valor % 100)-50)-(nota20*20)-(nota10*10)-(nota5*5)) / 2)
-else:
-    nota2 = int( ((valor % 100)-(nota20*20)-(nota10*10)-(nota5*5)) / 2)
+print('NOTAS DE 100: {}'.format(nota100))
+print('NOTAS DE 50: {}'.format(nota50))
+print('NOTAS DE 20: {}'.format(nota20))
+print('NOTAS DE 10: {}'.format(nota10))
+print('NOTAS DE 5: {}'.format(nota5))
+print('NOTAS DE 2: {}'.format(nota2))
 
-if valor%50==0:
-    nota20=0
-    nota10=0
-    nota5=0
-    nota2=0
-
-if True:
-    print('NOTAS DE 100: {}'.format(nota100))
-if True:
-    print('NOTAS DE 50: {}'.format(nota50))
-if True:
-    print('NOTAS DE 20: {}'.format(nota20))
-if True:
-    print('NOTAS DE 10: {}'.format(nota10))
-if True:
-    print('NOTAS DE 5: {}'.format(nota5))
-if True:
-    print('NOTAS DE 2: {}'.format(nota2))
-
-if int( ((valor % 100)-(nota20*20)-(nota10*10)-(nota5*5)-(nota2*2)) % valor) == 1 or valor == 1:
-    print('=-'*20)
-    print('NÃO TEMOS NOTA DE R$ 1')
-    print('=-' * 20)
